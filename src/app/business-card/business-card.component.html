@@ -1,0 +1,17 @@
+<ul *ngFor="let user of users; odd as isOdd">
+  <div class="background" *ngIf="isOdd">
+    <div class="card-header">
+      {{ user.company.name }}
+      <div class="card">
+        <div class="name">
+          {{ user.name }}
+        </div>
+        <div class="info">
+          <p>Site: {{ user.website }}</p>
+          <p>email: {{ user.email }}</p>
+          <p>telephone: {{ user.phone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ul>
