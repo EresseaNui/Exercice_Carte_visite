@@ -239,7 +239,13 @@ export class BusinessCardComponent implements OnInit {
     },
   ];
 
+  hidden: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggle() {
+    this.hidden = !this.hidden;
+  }
 }

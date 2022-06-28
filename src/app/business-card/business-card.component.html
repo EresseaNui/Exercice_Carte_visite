@@ -1,17 +1,21 @@
-<ul *ngFor="let employee of employees; odd as isOdd">
-  <div class="background" *ngIf="isOdd">
-    <div class="card-header">
-      {{ employee.company.name }}
-      <div class="card">
-        <div class="name">
-          {{ employee.name }}
-        </div>
-        <div class="info">
-          <p>Site: {{ employee.website }}</p>
-          <p>email: {{ employee.email }}</p>
-          <p>telephone: {{ employee.phone }}</p>
+<button (click)="toggle()" *ngIf="!hidden">Affiche la liste</button>
+<button (click)="toggle()" *ngIf="hidden">Masque la liste</button>
+<div *ngIf="hidden">
+  <ul *ngFor="let employee of employees; odd as isOdd">
+    <div class="background" *ngIf="isOdd">
+      <div class="card-header">
+        {{ employee.company.name }}
+        <div class="card">
+          <div class="name">
+            {{ employee.name }}
+          </div>
+          <div class="info">
+            <p>Site: {{ employee.website }}</p>
+            <p>email: {{ employee.email }}</p>
+            <p>telephone: {{ employee.phone }}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</ul>
+  </ul>
+</div>
