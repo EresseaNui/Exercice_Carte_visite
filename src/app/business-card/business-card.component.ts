@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./business-card.component.scss'],
 })
 export class BusinessCardComponent implements OnInit {
-  users: any[] = [
+  employees: any[] = [
     {
       id: 1,
       name: 'Leanne Graham',
